@@ -36,3 +36,314 @@ ul,
 ol {
   list-style: none;
 }
+
+.page {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  max-width: 1200px;
+  max-height: 800px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  max-width: 100%;
+  max-height: 100%;
+  gap: 30px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  gap: 16px;
+  max-width: 711px;
+  max-height: 456px;
+}
+
+.result__video-container {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  width: 711px;
+  height: 386px;
+}
+
+.result__video{
+  object-position: center;
+  object-fit: fill;
+  width: 711px;
+  height: 386px;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 711px;
+  max-height: 54px;
+  align-items: end;
+}
+
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-height: 534px;
+  overflow: scroll;
+}
+
+.content__list-item {
+  max-width: 398px;
+  max-height: 107px;
+}
+
+.content__list-item:not(:first-child) {
+  margin-top: 34px;
+}
+
+.content__details {
+  max-width: 399px;
+  max-height: 534px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.content__video-card {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: start;
+  justify-items: start;
+}
+
+.content__video-card-description-container {
+  display: grid;
+}
+
+.content__video-card-thumbnail {
+  max-width: 194px;
+  max-height: 103px;
+  display: grid;
+}
+
+.search-form__fieldset-title {
+  color: rgb(255, 255, 255);
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+}
+
+.title {
+  font-family: Oswald;
+  color: rgb(255, 255, 255);
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 94%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: rgb(84, 80, 80);
+
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: Oswald;
+}
+
+.content__video-card-title {
+  color: rgb(255, 255, 255);
+  font-family: Oswald;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 100%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  color: rgb(255, 255, 255);
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px;
+  text-align: left;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+fieldset {
+  border: none;
+}
+
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  min-width: 211px;
+  min-height: 22px;
+  gap: 5px;
+}
+
+.search-form__label-city, .search-form__label {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  gap: 5px;
+}
+
+.search-form__textfield {
+  min-width: 225px;
+  min-height: 27px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  appearance: none;
+  border: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  border-top: 1px solid rgb(255, 255, 255);
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  border: 1px solid rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.button {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.search-form__submit-button {
+  min-width: 194px;
+  min-height: 34px;
+}
+
+.more-button {
+  min-width: 399px;
+  min-height: 34px;
+  margin-top: 32px;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__label-city:has(:focus-visible) {
+  padding: 2px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.search-form__label:has(:focus-visible) {
+  padding: 2px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  content: " ";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(255, 255, 255);
+  margin: 1px;
+}
+
+.search-form__label:hover {
+  text-decoration: underline;
+}
+
+.search-form__label-city:hover {
+  text-decoration: none;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  box-sizing: border-box;
+  border: 1px solid rgb(255, 255, 255);
+  background: rgb(84, 80, 80);
+  text-decoration: none;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.search-form__submit-button:focus-visible{
+  box-sizing: border-box;
+  outline-offset: 2px;
+  outline: 1px solid rgb(255, 255, 255);
+}
+
+.more-button:focus-visible{
+  box-sizing: border-box;
+  outline-offset: 2px;
+  outline: 1px solid rgb(255, 255, 255);
+}
+
+.content__card-link {
+  display: block;
+  margin: 2px;
+}
+
+.content__card-link_current {
+  background-color: rgb(84, 80, 80);
+}
+
+.content__list-item:hover {
+  text-decoration: underline;
+}
+
+.content__list-item:active {
+  background: rgb(84, 80, 80);
+  text-decoration: none; 
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  box-sizing: border-box;
+  border: 1px solid rgb(255, 255, 255);
+}
